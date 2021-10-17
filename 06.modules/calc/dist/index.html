@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<script defer src="./index.js"></script></head>
+<script defer src="./index.js"></script><link href="./main.css" rel="stylesheet"></head>
 <body>
 <div class="container">
     <div class="header">Calculator</div>
     <label>
-        <input type="text" class="result">
+        <input id="userInput" type="text" class="result">
     </label>
-    <div class="first-row">
+    <!-- <div class="first-row">
         <input type="button" name="" value="&radic;" class="global">
         <input type="button" name="" value="(" class="global">
         <input type="button" name="" value=")" class="global">
         <input type="button" name="" value="%" class="global">
-    </div>
+    </div> -->
     <div class="second-row">
-        <input type="button" name="" value="7" class="global">
-        <input type="button" name="" value="8" class="global">
-        <input type="button" name="" value="9" class="global">
-        <input type="button" name="" value="/" class="global">
+        <input type="button" name="" value="7" class="global numbers">
+        <input type="button" name="" value="8" class="global numbers">
+        <input type="button" name="" value="9" class="global numbers">
+        <input id="divideBtn" type="button" name="" value="/" class="global">
     </div>
     <div class="third-row">
-        <input type="button" name="" value="4" class="global">
-        <input type="button" name="" value="5" class="global">
-        <input type="button" name="" value="6" class="global">
-        <input type="button" name="" value="X" class="global">
+        <input type="button" name="" value="4" class="global numbers">
+        <input type="button" name="" value="5" class="global numbers">
+        <input type="button" name="" value="6" class="global numbers">
+        <input id="multiplyBtn" type="button" name="" value="X" class="global">
     </div>
     <div class="fourth-row">
-        <input type="button" name="" value="1" class="global">
-        <input type="button" name="" value="2" class="global">
-        <input type="button" name="" value="3" class="global">
-        <input type="button" name="" value="-" class="global">
+        <input type="button" name="" value="1" class="global numbers">
+        <input type="button" name="" value="2" class="global numbers">
+        <input type="button" name="" value="3" class="global numbers">
+        <input id="subtractBtn" type="button" name="" value="-" class="global">
     </div>
     <div class="conflict">
         <div class="left">
-            <input type="button" name="" value="0" class=" big">
-            <input type="button" name="" value="." class=" small">
-            <input type="button" name="" value="Del" class=" red small white-text top-margin">
-            <input type="button" name="" value="=" class=" green white-text big top-margin">
+            <input type="button" name="" value="0" class=" big numbers">
+            <input type="button" name="" value="." class=" small numbers">
+            <input type="button" id="deleteBtn" name="" value="Del" class=" red small white-text top-margin">
+            <input id="equalsBtn" type="button" name="" value="=" class=" green white-text big top-margin">
         </div>
         <div class="right">
-            <input type="button" name="" value="+" class="global grey plus">
+            <input id="addBtn" type="button" name="" value="+" class="global grey plus">
         </div>
     </div>
 </div>
