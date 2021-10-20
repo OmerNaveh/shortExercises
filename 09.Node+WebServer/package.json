@@ -1,0 +1,16 @@
+{
+  "name": "n",
+  "version": "1.0.0",
+  "description": "- Theory - v8 engine, general explanation.\r - How node works\r - Use cases and companies using node.\r - Node install\r - node module system:",
+  "main": ".\\back\\index.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js" 
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
