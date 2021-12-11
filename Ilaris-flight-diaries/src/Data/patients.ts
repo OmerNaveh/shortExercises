@@ -38,7 +38,8 @@ const data = [
         "dateOfBirth": "1971-04-09",
         "ssn": "090471-8890",
         "gender": "male",
-        "occupation": "Digital evangelist"
+        "occupation": "Digital evangelist",
+        "entries": []
     }
 ];
 

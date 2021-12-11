@@ -5,14 +5,18 @@ import {v1 as uuid} from 'uuid';
 
 
 export const getSecurePatients = ():securePatient[]=>{
-    return patients.map(({id,name,dateOfBirth,gender,occupation})=> ({
+    return patients.map(({id,name,dateOfBirth,gender,occupation,entries})=> ({
         id,
         name,
         dateOfBirth,
         gender,
-        occupation
+        occupation,
+        entries
     })
     );
+};
+export const getPatientById= (id:string):securePatient|undefined=>{
+    return getSecurePatients().find(patient=> patient.id === id);
 };
 
 export const createPatient = (object:addPatient):patientType=>{
@@ -36,7 +40,7 @@ export const toNewPatient = ({ssn, name, dateOfBirth, gender, occupation}:fields
     };
     return newPatient;
 };
-const isString= (text:unknown):text is string=>{
+export const isString= (text:unknown):text is string=>{
     return typeof(text)==='string' || text instanceof(String);
 };
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

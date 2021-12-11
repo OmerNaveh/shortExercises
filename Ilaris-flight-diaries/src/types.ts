@@ -21,13 +21,17 @@ export enum gender{
   male='male',
   female='female'
 } 
+export interface Entry {
+  entries:string[]
+}
 export interface patientType{
       id: string,
       name: string,
       dateOfBirth: string,
       ssn: string,
       gender: gender,
-      occupation: string
+      occupation: string,
+      entries?: Entry[];
 }
-export type securePatient = Omit<patientType, 'ssn'>;
+export type securePatient = Omit<patientType, 'ssn'|'entries'>;
 export type addPatient = Omit<patientType, 'id'>;

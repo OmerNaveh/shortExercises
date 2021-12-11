@@ -1,9 +1,19 @@
 import express from "express";
-import { createPatient, getSecurePatients, toNewPatient } from "../services/patientService";
+import { createPatient, getSecurePatients,getPatientById ,isString, toNewPatient } from "../services/patientService";
 const router = express.Router();
 
 router.get('/', (_req,res)=>{
     res.json(getSecurePatients());
+});
+router.get('/:id', (req,res)=>{
+    if(!req.params.id || !isString(req.params.id)){
+        res.status(400).send('invalid id');
+    }
+    const patient = getPatientById(req.params.id);
+    if(patient){
+        res.json(patient);
+    }
+    else res.status(400).send('invalid id');
 });
 router.post('/',(req,res)=>{
     try {
